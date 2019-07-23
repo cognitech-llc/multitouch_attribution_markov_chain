@@ -1,22 +1,10 @@
+# Read in the necessary libraries
 library(pacman)
 pacman::p_load(ChannelAttribution,tidyverse)
 
 
-# Read in the necessary libraries
-if(!require(ChannelAttribution)){
-  install.packages("ChannelAttribution")
-  library(ChannelAttribution)
-}
-
-
-
-
-
-
-# Set Working Directory
-#setwd <- setwd('C:/Users/Morten/PycharmProjects/Markov Chain Attribution Modeling')
 # Read in our CSV file outputted by the python script
-df <- read.csv('Paths.csv')
+df <- read.csv('output/Paths.csv')
 # Select only the necessary columns
 df <- df[c(1,2)]
 # Run the Markov Model function
